@@ -1,0 +1,312 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs32\lang9 HTML:\par
+\fs22 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">\par
+    <title>haker news</title>\par
+    <link rel="stylesheet" href="css/style.css">\par
+</head>\par
+<body>\par
+    <header>\par
+        <div class="container">\par
+            <h1>Search hakernews</h1>\par
+            <form id="form"  autocomplete="off">\par
+                <input type="text" id="search"  placeholder="enter haker news">\par
+                <button>Search</button>\par
+            </form>\par
+        </div>\par
+       \par
+    </header>\par
+    <section id="video"></section>\par
+    <section class="result" id="result">\par
+        <h1>Results will be displayed here... </h1>\par
+        \par
+    </section>\par
+    \par
+\par
+<script src="js/main.js"></script>\par
+</body>\par
+</html>\par
+\fs32 CSS:\par
+\fs22 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap');\par
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');\par
+\par
+*\{\par
+    padding: 0;\par
+    margin: 0;\par
+    box-sizing: border-box;\par
+\}\par
+\par
+body\{\par
+    font-family: 'Gochi Hand', cursive;\par
+    background: linear-gradient(to left, \par
+    rgb(40, 40, 40),\par
+    rgb(40, 40, 40))\par
+    \par
+\}\par
+header\{\par
+    overflow: hidden;\par
+\par
+    padding: 10px;\par
+    background: linear-gradient(to right, \par
+                rgba(14, 236, 151, 0.65) ,\par
+                rgba(128, 13, 223, 0.65)),\par
+                url(../img/guitar-1.jpg);\par
+    height: 90vh;\par
+    width: 100vw;\par
+    border: none;\par
+    background-repeat: no-repeat;\par
+    background-position: center;\par
+    background-size: cover;\par
+    position: relative;\par
+    clip-path: polygon(3% 15%, 3% 7%, 96% 16%, 96% 27%, 91% 79%, 10% 93%, 8% 89%);\par
+    position: relative;\par
+\}\par
+\par
+.container\{\par
+    position: absolute;\par
+    color: white;\par
+    font-size: 22px;\par
+    top: 40%;\par
+    left: 50%;\par
+    transform: translate(-50%, -50%);\par
+\}\par
+.container h1\{\par
+    margin-bottom: 50px;\par
+    letter-spacing: 1px;\par
+    text-align: center;\par
+\}\par
+form\{\par
+    position: relative;\par
+    display: flex;\par
+    width: 500px;\par
+\}\par
+input\{\par
+    width: 100%;\par
+    max-width: 100%;\par
+    height: 45px;\par
+    padding: 15px 30px;\par
+    border-radius: 50px;\par
+    border: none;\par
+    outline: none;\par
+\}\par
+button\{\par
+    width: 100px;\par
+    max-width: 100%;\par
+    /* height: 40px; */\par
+    background: #9E2092;\par
+    color: white;\par
+    border-radius: 50px;\par
+    border: none;\par
+    position: absolute;\par
+    right: 2px;\par
+    bottom: 2px;\par
+    top: 2px;\par
+    font-weight: 600;\par
+    outline: none;\par
+\}\par
+button:hover\{\par
+    transform: scale(0.95);\par
+\}\par
+li\{\par
+    list-style: none;\par
+\}\par
+\par
+.result\{\par
+    color: white;\par
+    text-align: center;\par
+    font-family: 'Roboto Condensed', sans-serif;\par
+    margin-top: 20px;\par
+    position: relative;\par
+    display: block;\par
+\par
+\}\par
+#video\{\par
+    position: absolute;\par
+    left: 50%;\par
+    transform: translateX(-50%);\par
+    display: block;\par
+    margin-bottom: 50px;\par
+    color: green;\par
+    color: white;\par
+    text-align: center;\par
+    font-family: 'Roboto Condensed', sans-serif;\par
+\}\par
+.song-list\{\par
+    list-style: none;\par
+    display: flex;\par
+    flex-direction: column;\par
+    position: absolute;\par
+    left: 50%;\par
+    transform: translate(-50% ,0);\par
+    background: linear-gradient(to left, \par
+    rgb(40, 40, 40),\par
+    rgb(40, 40, 40))\par
+\par
+\}\par
+.song-list li\{\par
+    margin-bottom: 20px;\par
+    width: 500px;\par
+    justify-content: space-evenly;\par
+    letter-spacing: 1px;\par
+    font-weight: 500;\par
+    font-size: 18px;\par
+    text-decoration: overline;\par
+    text-decoration-color: rgb(12, 147, 100);\par
+    position: relative;\par
+    /* line-height: 30px; */\par
+\}\par
+\par
+.song-list li::after\{\par
+    content: "";\par
+    position: absolute;\par
+    right: -20px;\par
+    left: -20px;\par
+    bottom: -4px;\par
+    height: 3px;\par
+    background: rgb(12, 147, 100);\par
+    display: inline-block;\par
+\}\par
+.song-list li div\{\par
+    float: left;\par
+\}\par
+\par
+.song-list li span\{\par
+    float: right;\par
+    background-color: #9E2092;\par
+    border: 0;\par
+    font-size: 12px;\par
+    border-radius: 10px;\par
+    color: #fff;\par
+    cursor: pointer;\par
+    font-weight: 400;\par
+    padding: 4px 10px;\par
+    text-transform: capitalize;\par
+\}\par
+.btn\{\par
+    background-color: rgb(26, 170, 115);\par
+    margin: 0 auto;\par
+    border: 0;\par
+    font-size: 14px;\par
+    border-radius: 10px;\par
+    color: rgb(199, 193, 193);\par
+    cursor: pointer;\par
+    font-weight: 400;\par
+    padding: 6px 20px;\par
+    width: 100px;\par
+    text-transform: capitalize;\par
+\}\par
+\par
+\par
+@media only screen and (max-width: 800px) \{\par
+    header\{\par
+        height: 70vh;\par
+        width: 95%vw;\par
+    \}\par
+    .container\{\par
+        font-size: 20px;\par
+        \par
+    \}\par
+    form\{\par
+        max-width: 300px;\par
+    \}\par
+    input\{\par
+        width: 100%;\par
+        height: 40px;\par
+        padding: 12px 20px;\par
+  \par
+    \}\par
+    button\{\par
+        width: 80px;\par
+        max-width: 100%;\par
+    \}\par
+    .song-list li\{\par
+        margin-bottom: 15px;\par
+        max-width: 300px;\par
+        letter-spacing: 0.5px;\par
+        font-size: 17px;\par
+        \par
+    \}\par
+   \par
+    \par
+  \}\par
+\fs32 JS:\par
+\fs22 const form = document.getElementById('form')\par
+const search = document.getElementById('search')\par
+const result = document.getElementById('result')\par
+\par
+\par
+const apiURL = '{{\field{\*\fldinst{HYPERLINK https://hn.algolia.com/api }}{\fldrslt{https://hn.algolia.com/api\ul0\cf0}}}}\f0\fs22 ';\par
+\par
+\par
+\par
+form.addEventListener('submit', e=> \{\par
+    e.preventDefault();\par
+    searchValue = search.value.trim()\par
+\par
+    if(!searchValue)\{\par
+        alert("There is nothing to search")\par
+    \}\par
+    else\{ \par
+        searchnews(searchValue)\par
+    \}\par
+\})\par
+\par
+\par
+//search song \par
+async function searchnews(searchValue)\{\par
+    const searchResult = await fetch(`$\{apiURL\}/suggest/$\{searchValue\}`)\par
+    const data = await searchResult.json();\par
+\par
+    // console.log(finaldata)\par
+    showData(data)\par
+\}\par
+\par
+function showData(data)\{\par
+  \par
+    result.innerHTML = `\par
+    <ul class="news-list">\par
+      $\{data.data\par
+        .map(news<li>\par
+                    <div>\par
+                        <strong>$\{newsist.name\}</strong> -$\{newsle\} \par
+                    </div>\par
+                    <span data-artist="$\{newsist.name\}" data-newse="$\{newsle\}"> get newsn>\par
+                </li>`\par
+        )\par
+        .join('')\}\par
+    </ul>\par
+  `;\par
+\}\par
+\par
+\par
+\par
+\par
+result.addEventListener('click', e=>\{\par
+    const clickedElement = e.target;\par
+\par
+    if (clickedElement.tagName === 'SPAN')\{\par
+        const title = clickedElement.getAttribute('data-title');\par
+        const newsTitle = clickedElement.getAttribute('data-newstitle');\par
+        \par
+        getnews(title, newsTitle)\par
+    \}\par
+\})\par
+\par
+async function getnews(title, newsTitle) \{\par
+    const res = await fetch(`$\{apiURL\}/v1/$\{title\}/$\{newsTitle\}`);\par
+    const data = await res.json();\par
+  \par
+    const news1 = data.news1.replace(/(\\r\\n|\\r|\\n)/g, '<br>');\par
+  \par
+    result.innerHTML = `<h2><strong>$\{title\}</strong> - $\{newsTitle\}</h2>\par
+    <p>$\{news1\}</p>`;\par
+  \par
+  \}\fs32\par
+}
+ 
